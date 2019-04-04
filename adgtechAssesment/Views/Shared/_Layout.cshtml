@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>ADGTECH Assignment</title>
+    <link href="../../Content/Site.css" rel="stylesheet" />
+    <link href="../../Content/ui-bootstrap-csp.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="nvbar-collapse collapse">
+        <ul>
+            <li>
+                @Html.ActionLink("Problem 1", "Problem1", "Home")
+            </li>
+            <li>
+                @Html.ActionLink("Problem 2", "Problem2", "Home")
+            </li>
+        </ul>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+</body>
+</html>
+
+<script src="../../Scripts/jquery-3.3.1.min.js"></script>
+<script src="../../Scripts/bootstrap.min.js"></script>

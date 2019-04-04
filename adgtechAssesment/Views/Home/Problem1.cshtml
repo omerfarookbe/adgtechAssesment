@@ -1,0 +1,47 @@
+﻿<script src="../../Scripts/angular.min.js"></script>
+<script src="../../Scripts/AngularController/HomeAngularJS.js"></script>
+
+<div ng-app="HomeApp" ng-controller="HomeController">
+    <table>
+        <thead>
+            <th>Incident #</th>
+            <th>Incident Description</th>
+            <th>Incident Priority</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="e in record">
+                <td>{{e.Incident_No}}</td>
+                <td>{{e.Incident_Desc}}</td>
+                <td>{{e.Incident_Priority}}</td>
+                <td><a href="#" ng-click="getforupdate(e)">Update</a></td>
+                <td><a href="#" ng-click="deleterecord(e.Incident_No)">Delete</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br /><br /><br />
+    <table>
+        <tr>
+            <td>
+                <div>
+                    Incident #<input name="Incident_No" ng-model="updateIncident_No" placeholder="Incident #" />
+                </div>
+            </td>
+            <td>
+                <div>
+                    Incident Description<input name="Incident_Desc" ng-model="updateIncidnet_Desc" placeholder="Incident #" />
+                </div>
+            </td>
+            <td>
+                <div>
+                    Incident Priority<input name="Incident_Priority" ng-model="UpdateIncident_Priority" placeholder="Incident #" />
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" id="btnupdate" ng-click="updatenew()">Update</button>
+            </td>
+        </tr>
+    </table>
+</div>
